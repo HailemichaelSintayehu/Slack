@@ -10,7 +10,3 @@ function Header() {
 
 export default Header;
 
-const HeaderContainer = styled.div`
-
-
-`
