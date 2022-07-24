@@ -1,12 +1,14 @@
-import React from 'react'
-import styled from "styled-components" 
+import React from "react";
+import styled from "styled-components";
 function Header() {
   return (
-    <div>
- 
-    </div>
-  )
+      <HeaderContainer>
+        <h1>Test</h1>
+      </HeaderContainer>
+  );
 }
 
 export default Header;
-
+const HeaderContainer = styled.div`
+  color: red;
+`;
