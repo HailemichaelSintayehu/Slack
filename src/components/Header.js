@@ -41,7 +41,7 @@ const HeaderSearch = styled.div`
     background-color: transparent;
     border:none;
     text-align:center;
-    min-width:30vw;
+    min-width:30vw; 
     outline:0;
     color:white;
   }
