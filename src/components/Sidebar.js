@@ -2,6 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import CreateIcon from "@mui/icons-material/Create";
+import SidebarOptions from "./SidebarOptions";
+import InsertCommentIcon from "@mui/icons-material/InsertComment";
+import InboxIcon from "@mui/icons-material/Inbox";
+import DraftsIcon from "@mui/icons-material/Drafts";
+import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
+import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
+import AppsIcon from "@mui/icons-material/Apps";
+import FileCopyIcon from "@mui/icons-material/FileCopy";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 function Sidebar() {
   return (
     <div>
@@ -13,9 +22,17 @@ function Sidebar() {
               <FiberManualRecordIcon />
               hailemichael sintayehu
             </h3>
-            <CreateIcon />
           </SidebarInfo>
+          <CreateIcon />
         </SidebarHeader>
+        <SidebarOptions Icon={InsertCommentIcon} title="Threads" />
+        <SidebarOptions Icon={InboxIcon} title="Mentios & reactions" />
+        <SidebarOptions Icon={DraftsIcon} title="Saved items" />
+        <SidebarOptions Icon={BookmarkBorderIcon} title="Channel browser" />
+        <SidebarOptions Icon={PeopleAltIcon} title="People & user groups" />
+        <SidebarOptions Icon={AppsIcon} title="Apps" />
+        <SidebarOptions Icon={FileCopyIcon} title="File browser" />
+        <SidebarOptions Icon={ExpandLessIcon} title="Show less" />
       </SidebarContainer>
     </div>
   );
@@ -31,19 +48,37 @@ const SidebarContainer = styled.div`
   /* display: flex; */
   height: 100vh;
   max-width: 260px;
-  border-top:1px solid #49274b; ;
+  border-top: 1px solid #49274b;
 `;
 const SidebarHeader = styled.div`
   display: flex;
   border-bottom: 1px solid #49274b;
   padding: 13px;
-  >.MuiSvgIcon-root{
-    padding:8px;
-    color:#49274b;
+  > .MuiSvgIcon-root {
+    padding: 8px;
+    color: #49274b;
     font-size: 18px;
     background-color: white;
     border-radius: 999px;
-
   }
 `;
-const SidebarInfo = styled.div``;
+const SidebarInfo = styled.div`
+  flex: 1;
+  > h2 {
+    font-size: 15px;
+    font-weight: 900;
+    margin-bottom: 5px;
+  }
+  > h3 {
+    display: flex;
+    font-weight: 13px;
+    font-weight: 400;
+    align-items: center;
+  }
+  > h3 > .MuiSvgIcon-root {
+    font-size: 14px;
+    margin-top: 1px;
+    margin-right: 2px;
+    color: green;
+  }
+`;
