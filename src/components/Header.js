@@ -27,6 +27,7 @@ function Header() {
 }
 
 export default Header;
+
 const HeaderSearch = styled.div`
   flex:0.4;
   opacity:1;

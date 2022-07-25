@@ -1,19 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
-import EditIcon from "@mui/icons-material/Edit";
+import CreateIcon from "@mui/icons-material/Create";
 function Sidebar() {
   return (
     <div>
       <SidebarContainer>
         <SidebarHeader>
           <SidebarInfo>
-            <h1>Team Hailemichael</h1>
+            <h2>Team Hailemichael</h2>
             <h3>
               <FiberManualRecordIcon />
               hailemichael sintayehu
             </h3>
-            <EditIcon />
+            <CreateIcon />
           </SidebarInfo>
         </SidebarHeader>
       </SidebarContainer>
@@ -28,8 +28,22 @@ const SidebarContainer = styled.div`
   background-color: var(--slack-color);
   margin-top: 60px;
   flex: 0.3;
-  display:flex;
+  /* display: flex; */
   height: 100vh;
+  max-width: 260px;
+  border-top:1px solid #49274b; ;
 `;
-const SidebarHeader = styled.div``;
+const SidebarHeader = styled.div`
+  display: flex;
+  border-bottom: 1px solid #49274b;
+  padding: 13px;
+  >.MuiSvgIcon-root{
+    padding:8px;
+    color:#49274b;
+    font-size: 18px;
+    background-color: white;
+    border-radius: 999px;
+
+  }
+`;
 const SidebarInfo = styled.div``;
